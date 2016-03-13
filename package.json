@@ -1,0 +1,18 @@
+{
+  "name": "TEST-GRUNT",
+  "version": "1.0.10",
+  "author": "Miguel",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-compass": "~0.6.0",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.0",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}
