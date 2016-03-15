@@ -13,6 +13,9 @@
     "grunt-contrib-jshint": "~0.6.3",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0"
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-express": "^1.4.1",
+    "grunt-open": "~0.2.3",
+    "matchdep": "~0.3.0"
   }
 }

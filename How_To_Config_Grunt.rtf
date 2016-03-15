@@ -1,0 +1,200 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /*module.exports = function(grunt)\{\
+	//To install moduels\
+	//npm install grunt-contrib-copy --save-dev\
+\
+	//grunt taks and plugins\
+\
+	// Project configuration.\
+	grunt.initConfig(\{\
+		pkg: grunt.file.readJSON('package.json'),\
+		// Build paths\
+		build:\{\
+			dirs:\{\
+				html:\{\
+					src: '/html'.\
+					dest: '/dest'\
+\
+				\},\
+				css:\{\
+					src: '/sass'.\
+					dest: '/dest'\
+\
+				\},\
+\
+			\}\
+		\},\
+		watch:\{\
+			css:\{\
+				files:[\
+				'**/*.sass',\
+				'**/*.scss'\
+				],\
+				tasks: [\
+				'js/*.js',\
+				'Gruntfile.js'\
+				],\
+				tasks: ['jshint']\
+			\}\
+		\},\
+		compass:\{\
+			dist: \{\
+				options:\{\
+				sassDir: 'sass',\
+				cssDir: 'css',\
+				outputStyle: 'compressed'\
+				\}\
+			\}\
+			\
+		\},\
+		jshint:\{\
+			options:\{\
+				jshintrc: '.jshintrc'\
+			\},\
+			all: ['Gruntfile.js', 'js/*.js']\
+		\},\
+		browserSync:\{\
+			files: \{\
+				src: [\
+				'css/*.css',\
+				'/img/*',\
+				'js/*.js',\
+				'**/*.html'\
+				]\
+			\},\
+			options: \{\
+				watchTask: true\
+			\}\
+			//host: 'treehouse.dev'\
+			//However, if you are using custom domains or browser sync isn\'92t finding the correct IP, you can specify your host using the host property.\
+		\},\
+		copy: \{\
+			build: \{\
+				cwd: 'soure',\
+				src: ['**'],\
+				dest: 'dest',\
+				expand: true\
+			\}\
+		\},\
+		clean: \{\
+			build: \{\
+				src: ['dest']\
+			\},\
+			stylesheets: \{\
+				src: ['build/**/*.css', '!build/appilcation.css']\
+			\},\
+			scripts: \{\
+				src: ['build/**/*.js', '!build/appications.js']\
+			\}\
+		\},\
+		cssmin: \{\
+			build: \{\
+				files: \{\
+					'build/appilcation.css': ['build/**/*.css']\
+				\}\
+			\},\
+		\}\
+	\});\
+\
+	// ===========================================================================\
+	// LOAD GRUNT PLUGINS ========================================================\
+	// ===========================================================================\
+	// we can only load these if they are in our package.json\
+	// make sure you have run npm install so our app can find these\
+	grunt.loadNpmTasks('grunt-contrib-compass');\
+	grunt.loadNpmTasks('grunt-contrib-watch');\
+	grunt.loadNpmTasks('grunt-contrib-jshint');\
+	grunt.loadNpmTasks('grunt-browser-sync');\
+	grunt.loadNpmTasks('grunt-contrib-clean');\
+	grunt.loadNpmTasks('grunt-contrib-copy');\
+	grunt.loadNpmTasks('grunt-contrib-cssmin');\
+\
+	//Register the default tasks\
+	grunt.registerTask('default' \
+		['watch','build' \
+		/*'browserSync'\
+			['clean',\
+		 	 'copy',\
+		 	 'scripts',\
+		 	 'cssmin',\
+		 	 'stylesheets'\
+		 	 ]*/\
+		]\
+	);\
+\}\
+\
+\
+\
+/////////////////////////////////////////////////////////////////////SERVER\
+module.exports = function(grunt)\{\
+\
+	//http://www.thecrumb.com/2014/03/15/using-grunt-for-live-reload/\
+\
+	// Load Grunt tasks declared in the package.json file\
+	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);\
+\
+	// Configure Grunt\
+	grunt.initConfig(\{\
+\
+		// Grunt express - our webserver\
+		// https://github.com/blai/grunt-express\
+		express: \{\
+		    all: \{\
+		        options: \{\
+		            bases: [BUILD_DIR],\
+		            port: 8080,\
+		            hostname: "0.0.0.0",\
+		            livereload: true\
+		        \}\
+		    \}\
+		\},\
+\
+		jshint: \{\
+	      all: [\
+	        'Gruntfile.js',\
+	        'tasks/*.js',\
+	        '<%= nodeunit.tests %>'\
+	      ],\
+	      options: \{\
+	        jshintrc: '.jshintrc'\
+	      \}\
+	    \},\
+\
+	    nodeunit: \{\
+	      tests: ['test/*_test.js']\
+	    \},\
+\
+		// grunt-watch will monitor the projects files\
+		// https://github.com/gruntjs/grunt-contrib-watch\
+		watch: \{\
+		    all: \{\
+		            files: '**/*.html',\
+		            options: \{\
+		                livereload: true\
+		        \}\
+		    \}\
+		\},\
+\
+		// grunt-open will open your browser at the project's URL\
+		// https://www.npmjs.org/package/grunt-open\
+		open: \{\
+		    all: \{\
+		        path: 'http://localhost:8080/index.html'\
+		    \}\
+		\}\
+\
+		// Creates the `server` task\
+		grunt.registerTask('server', [\
+		    'express',\
+		    'open',\
+		    'watch'\
+		    ]);\
+		\};\
+\
+	\});\
+\}}

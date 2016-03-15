@@ -62,16 +62,24 @@ module.exports = function(grunt){
 
 		/*Whether to spawn task runs in a child process. Setting this option to false speeds up the reaction time of the watch (usually 500ms faster for most) and allows subsequent task runs to share the same context. Not spawning task runs can make the watch more prone to failing so please use as needed.*/
 		watch: {
-			scripts: {
-				files: ['/**/*.js'],
-				tasks: ['jshint'],
-				css: {
-					files: '**/scss',
-					tasks: ['sass']
 
+			css: {
+		        files: ['src/css/*.scss'],
+		        tasks: ['sass:dev']
+		      },
+		      html: {
+		        files: ['index.html'],
+		        tasks: ['build'],
+		        options: {
+					livereload: true,
 				},
+		      },
+			scripts: {
+				files: ['js/*.js', 'js/libs/*.js'],
+				tasks: ['concat', 'uglify'],
 				options: {
 					spawn: false,
+					livereload: true,
 				},
 			},	
 		}
@@ -94,5 +102,5 @@ module.exports = function(grunt){
 	
 
 	//Register the default tasks
-	grunt.registerTask('default', ['jshint','sass', 'watch']);
+	grunt.registerTask('default', ['watch', 'jshint','sass']);
 }
