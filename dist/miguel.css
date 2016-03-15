@@ -1,25 +1,22 @@
 /*
-Error: Inconsistent indentation: "\t " was used for indentation, but the rest of the document was indented using 1 tab.
-        on line 17 of sass/miguel.sass
+Error: Invalid variable: "$red = #ff0000;".
+        on line 1 of sass/miguel.sass
 
-12: }
-13: 
-14: .outline {
-15: 	outline: 1px solid;
-16: 	.&-red {
-17: 	 color: $red;
-18: 	}
-19: }
-20: 
-21: .main-image {
-22: 	background: url('../img/2000px-Star_Wars_Logo.png') no repeat;
+1: $red = #ff0000;
+2: 
+3: .style {
+4: 	.&-100 {
+5: 		float:left;
+6: 		width: 100%;
 
 Backtrace:
-sass/miguel.sass:17
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:483:in `block in tabulate'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:441:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:441:in `each_with_index'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:441:in `tabulate'
+sass/miguel.sass:1
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:739:in `parse_variable'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:639:in `parse_line'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:533:in `build_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:552:in `block in append_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:551:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:551:in `append_children'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:406:in `_to_tree'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:378:in `_render_with_sourcemap'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.21/lib/sass/engine.rb:295:in `render_with_sourcemap'
@@ -34,4 +31,4 @@ sass/miguel.sass:17
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Inconsistent indentation: \"\t \" was used for indentation, but the rest of the document was indented using 1 tab.\A         on line 17 of sass/miguel.sass\A \A 12: }\A 13: \A 14: .outline {\A 15: 	outline: 1px solid;\A 16: 	.&-red {\A 17: 	 color: $red;\A 18: 	}\A 19: }\A 20: \A 21: .main-image {\A 22: 	background: url('../img/2000px-Star_Wars_Logo.png') no repeat;"; }
+  content: "Error: Invalid variable: \"$red = #ff0000;\".\A         on line 1 of sass/miguel.sass\A \A 1: $red = #ff0000;\A 2: \A 3: .style {\A 4: 	.&-100 {\A 5: 		float:left;\A 6: 		width: 100%;"; }
