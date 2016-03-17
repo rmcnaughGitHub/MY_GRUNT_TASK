@@ -1,0 +1,113 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'grunt-contrib-build',
+1 verbose cli   '--save-dev' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/package.json
+5 warn package.json TEST-GRUNT@1.0.10 No description
+6 warn package.json TEST-GRUNT@1.0.10 No repository field.
+7 warn package.json TEST-GRUNT@1.0.10 No license field.
+8 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt/package.json
+9 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-browser-sync/package.json
+10 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-build/package.json
+11 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-contrib-clean/package.json
+12 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-contrib-compass/package.json
+13 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-contrib-concat/package.json
+14 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-contrib-copy/package.json
+15 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-contrib-cssmin/package.json
+16 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-contrib-html-build/package.json
+17 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-contrib-jshint/package.json
+18 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-contrib-sass/package.json
+19 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-contrib-uglify/package.json
+20 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-contrib-watch/package.json
+21 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-express/package.json
+22 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/grunt-open/package.json
+23 verbose installManyTop reading scoped package data from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/node_modules/matchdep/package.json
+24 info package.json grunt@0.4.5 No license field.
+25 info package.json grunt-contrib-compass@0.6.0 No license field.
+26 info package.json grunt-browser-sync@2.2.0 No license field.
+27 info package.json grunt-build@0.1.1 No license field.
+28 info package.json grunt-contrib-jshint@0.6.5 No license field.
+29 info package.json grunt-express@1.4.1 No license field.
+30 info package.json grunt-contrib-html-build@0.5.6 No license field.
+31 info package.json grunt-open@0.2.3 No license field.
+32 info package.json matchdep@0.3.0 No license field.
+33 verbose readDependencies loading dependencies from /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK/package.json
+34 silly cache add args [ 'grunt-contrib-build', null ]
+35 verbose cache add spec grunt-contrib-build
+36 silly cache add parsed spec { raw: 'grunt-contrib-build',
+36 silly cache add   scope: null,
+36 silly cache add   name: 'grunt-contrib-build',
+36 silly cache add   rawSpec: '',
+36 silly cache add   spec: '*',
+36 silly cache add   type: 'range' }
+37 silly addNamed grunt-contrib-build@*
+38 verbose addNamed "*" is a valid semver range for grunt-contrib-build
+39 silly addNameRange { name: 'grunt-contrib-build', range: '*', hasData: false }
+40 silly mapToRegistry name grunt-contrib-build
+41 silly mapToRegistry using default registry
+42 silly mapToRegistry registry https://registry.npmjs.org/
+43 silly mapToRegistry uri https://registry.npmjs.org/grunt-contrib-build
+44 verbose addNameRange registry:https://registry.npmjs.org/grunt-contrib-build not in flight; fetching
+45 verbose request uri https://registry.npmjs.org/grunt-contrib-build
+46 verbose request no auth needed
+47 info attempt registry request try #1 at 3:35:23 PM
+48 verbose request id dd27ec164ffefa6e
+49 http request GET https://registry.npmjs.org/grunt-contrib-build
+50 http 404 https://registry.npmjs.org/grunt-contrib-build
+51 verbose headers { 'content-type': 'application/json',
+51 verbose headers   'cache-control': 'max-age=0',
+51 verbose headers   'content-length': '2',
+51 verbose headers   'accept-ranges': 'bytes',
+51 verbose headers   date: 'Thu, 17 Mar 2016 19:35:24 GMT',
+51 verbose headers   via: '1.1 varnish',
+51 verbose headers   age: '0',
+51 verbose headers   connection: 'keep-alive',
+51 verbose headers   'x-served-by': 'cache-atl6223-ATL',
+51 verbose headers   'x-cache': 'MISS',
+51 verbose headers   'x-cache-hits': '0',
+51 verbose headers   'x-timer': 'S1458243324.088627,VS0,VE89' }
+52 silly get cb [ 404,
+52 silly get   { 'content-type': 'application/json',
+52 silly get     'cache-control': 'max-age=0',
+52 silly get     'content-length': '2',
+52 silly get     'accept-ranges': 'bytes',
+52 silly get     date: 'Thu, 17 Mar 2016 19:35:24 GMT',
+52 silly get     via: '1.1 varnish',
+52 silly get     age: '0',
+52 silly get     connection: 'keep-alive',
+52 silly get     'x-served-by': 'cache-atl6223-ATL',
+52 silly get     'x-cache': 'MISS',
+52 silly get     'x-cache-hits': '0',
+52 silly get     'x-timer': 'S1458243324.088627,VS0,VE89' } ]
+53 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/grunt-contrib-build
+53 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:239:14)
+53 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+53 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:354:22)
+53 verbose stack     at Request.emit (events.js:110:17)
+53 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1207:14)
+53 verbose stack     at Request.emit (events.js:129:20)
+53 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1153:12)
+53 verbose stack     at IncomingMessage.emit (events.js:129:20)
+53 verbose stack     at _stream_readable.js:908:16
+53 verbose stack     at process._tickCallback (node.js:355:11)
+54 verbose statusCode 404
+55 verbose pkgid grunt-contrib-build
+56 verbose cwd /Users/Miguel/Desktop/ProjectsHD/GITHUB/MY_FIRST_GRUNT_TASK
+57 error Darwin 15.3.0
+58 error argv "node" "/usr/local/bin/npm" "install" "grunt-contrib-build" "--save-dev"
+59 error node v0.12.7
+60 error npm  v2.11.3
+61 error code E404
+62 error 404 Registry returned 404 for GET on https://registry.npmjs.org/grunt-contrib-build
+62 error 404
+62 error 404 'grunt-contrib-build' is not in the npm registry.
+62 error 404 You should bug the author to publish it (or use the name yourself!)
+62 error 404 It was specified as a dependency of 'TEST-GRUNT'
+62 error 404
+62 error 404 Note that you can also install from a
+62 error 404 tarball, folder, http url, or git url.
+63 verbose exit [ 1, true ]

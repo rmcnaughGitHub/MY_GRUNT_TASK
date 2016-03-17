@@ -57,15 +57,20 @@ module.exports = function(grunt){
 				src: [
 					'js/miguel.js'
 				],
-				dest: 'dist/js/miguel.js',
+				dest: 'dist/js/miguel.min.js',
 			},
 			uglify: {
 				src: 'js/miguel.js',
-				dest: 'dist/js/miguel.js',
+				dest: 'dist/js/miguel.min.js',
 			}
 
 		},
-
+		uglify: { // Begin JS Uglify Plugin
+	      build: {
+	        src: ['src/*.js'],
+	        dest: 'js/miguel.min.js'
+	      }
+	    },
 		/*Whether to spawn task runs in a child process. Setting this option to false speeds up the reaction time of the watch (usually 500ms faster for most) and allows subsequent task runs to share the same context. Not spawning task runs can make the watch more prone to failing so please use as needed.*/
 		watch: {
 
@@ -107,6 +112,8 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	//grunt.loadNpmTasks('grunt-contrib-html-build');
+	//grunt.loadNpmTasks('grunt-contrib-build');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	
 
