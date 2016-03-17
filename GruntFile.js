@@ -18,12 +18,18 @@ module.exports = function(grunt){
 
 		//http://culttt.com/2013/11/18/setting-sass-grunt/
 		sass: { // Task 
-			dist: { // Target
-				files: {
-					'dist/miguel.min.css': 'sass/miguel.scss'// 'destination': 'source'
-				}
-
-			}
+			dist: {
+	        options: {
+	          sourcemap: 'none'
+	        },
+	        files: [{
+	          expand: true,
+	          cwd: 'sass',
+	          src: ['**/*.scss'],
+	          dest: 'css',
+	          ext: '.css'
+		      }]
+		     }
 		},
 
 		css: {
@@ -64,9 +70,9 @@ module.exports = function(grunt){
 		watch: {
 
 			css: {
-		        files: ['src/css/*.scss'],
-		        tasks: ['sass:dev']
-		      },
+		        files: '**/*.scss',
+		        tasks: 'sass'
+		       },
 		    html: {
 		       files: ['index.html'],
 		       tasks: ['build'],
@@ -74,7 +80,11 @@ module.exports = function(grunt){
 					livereload: true,
 				},
 		    },
-		    sass: {
+		    js: {
+		    	files: '**/*.js',
+		    	tasks: ['uglify']
+		    }
+		    /*sass: {
 		    	files: ['sass/miguel.scss'],
 		    	tasks: ['sass/*.scss']
 		    },
@@ -85,7 +95,7 @@ module.exports = function(grunt){
 					spawn: false,
 					livereload: true,
 				},
-			},	
+			},	*/
 		}
 
 	});

@@ -27,7 +27,7 @@ h1 {
 }
 
 img {
-  border:0;
+  border: 0;
   outline: none;
 }
 
@@ -73,17 +73,17 @@ img {
 }
 
 .style {
-	.&-100 {
-		float:left;
+	&-100 {
+		float: left;
 		width: 100%;
 	}
 
-	.&-50 {
-		float:left;
+	&-50 {
+		float: left;
 		width: 50%;
 	}
 
-	.&-bold {
+	&-bold {
 		font-family: "BrandonGrotesqueWeb-Bold", Arial, sans-serif;
 		font-weight: 900;
 	}
@@ -92,7 +92,7 @@ img {
 .outline {
 	outline: 1px solid;
 
-	.&-red {
+	&-red {
 	 color: $red;
 	}
 }
@@ -107,11 +107,11 @@ img {
 .type {
 	font-family: 'TradeGothicLTPro-BdCn20', Arial, sans-serif;
 
-	.&-18 {
+	&-18 {
 		font-size: 18px;
 	}
 
-	.&-demi-bold { 
+	&-demi-bold { 
 		font-weight: 400;
 	}
 }

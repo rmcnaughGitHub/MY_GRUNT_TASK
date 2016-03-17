@@ -11,8 +11,14 @@
 	},
 
 	setElements:function(){
-		//console.log('WORKING');
+		buttonsPress();
 	},
+
+	buttonsPress:function(){
+		$('button').click(function () {
+			alert("jQuery alert!");
+		});
+	}
 
 	return {
 		init: init
