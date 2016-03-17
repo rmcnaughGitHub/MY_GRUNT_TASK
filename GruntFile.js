@@ -20,7 +20,7 @@ module.exports = function(grunt){
 		sass: { // Task 
 			dist: { // Target
 				files: {
-					'dist/miguel.css': 'sass/miguel.sass'// 'destination': 'source'
+					'dist/miguel.min.css': 'sass/miguel.scss'// 'destination': 'source'
 				}
 
 			}
@@ -51,11 +51,11 @@ module.exports = function(grunt){
 				src: [
 					'js/miguel.js'
 				],
-				dst: '/dest/js/miguel.js',
+				dest: 'dist/js/miguel.js',
 			},
 			uglify: {
 				src: 'js/miguel.js',
-				dest: '/dest/js/miguel.js',
+				dest: 'dist/js/miguel.js',
 			}
 
 		},
@@ -67,13 +67,17 @@ module.exports = function(grunt){
 		        files: ['src/css/*.scss'],
 		        tasks: ['sass:dev']
 		      },
-		      html: {
-		        files: ['index.html'],
-		        tasks: ['build'],
-		        options: {
+		    html: {
+		       files: ['index.html'],
+		       tasks: ['build'],
+		       options: {
 					livereload: true,
 				},
-		      },
+		    },
+		    sass: {
+		    	files: ['sass/miguel.scss'],
+		    	tasks: ['sass/*.scss']
+		    },
 			scripts: {
 				files: ['js/*.js', 'js/libs/*.js'],
 				tasks: ['concat', 'uglify'],
@@ -91,9 +95,11 @@ module.exports = function(grunt){
 	// make sure you have run npm install so our app can find these
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	
 
 	//Register the default tasks
-	grunt.registerTask('default', ['watch', 'jshint','sass']);
+	grunt.registerTask('default', ['watch', 'jshint','sass','concat','uglify']);
 }
